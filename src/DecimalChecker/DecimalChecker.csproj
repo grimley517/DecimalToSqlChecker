@@ -8,9 +8,13 @@
     <PackageId>Grimpop.DecimalChecker</PackageId>
     <PackageVersion>0.0.1</PackageVersion>
     <Authors>Brian Jones</Authors>
-    <Copyright>2022 Grimpop</Copyright>
+    <Copyright>2022 © Brian Jones, GrimPop</Copyright>
     <NeutralLanguage>en-AU</NeutralLanguage>
-    <PackageLicenseUrl>https://github.com/grimley517/DecimalToSqlChecker/blob/main/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/grimley517/DecimalToSqlChecker</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/grimley517/DecimalToSqlChecker</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>decimal sqlServer scale precision</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <Owners>Grimpop</Owners>
     <Title>Grimpop Decimal Checker</Title>

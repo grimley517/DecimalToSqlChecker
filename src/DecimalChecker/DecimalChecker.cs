@@ -2,7 +2,7 @@
 
 namespace DecimalChecker
 {
-
+    /// <inheritdoc />
     public class DecimalChecker : IDecimalChecker
     {
         /// <inheritdoc />
