@@ -1,4 +1,4 @@
-﻿namespace DecimalChecker;
+﻿namespace GrimPop.DecimalChecker;
 
 public static class DecimalExtensions
 {

@@ -1,7 +1,4 @@
-using System.Text;
-using DecimalChecker;
-
-namespace Grimpop.DecimalChecker;
+namespace GrimPop.DecimalChecker;
 
 public class DecimalValidator{
     public int TargetPrecision { get; set; }

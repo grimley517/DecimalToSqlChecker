@@ -20,11 +20,7 @@
 		<Description>A utility for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
 
 Other uses may become apparent.</Description>
-		<PackageVersion>0.1.0</PackageVersion>
-		<ReleaseNotes>
-        ### Version 0.1.0
 
-Other uses may become apparent.</Description>
     <PackageVersion>0.1.1</PackageVersion>
     <ReleaseNotes>
         ### Version 0.1.1

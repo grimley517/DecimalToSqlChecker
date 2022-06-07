@@ -1,4 +1,4 @@
-﻿namespace Grimpop.DecimalChecker;
+﻿namespace GrimPop.DecimalChecker;
 
 public class DecimalValidationException : Exception{
     public decimal FailedInput { get; init; }

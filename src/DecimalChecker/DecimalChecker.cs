@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DecimalChecker;
+namespace GrimPop.DecimalChecker;
 
 /// <inheritdoc />
 public class DecimalChecker : IDecimalChecker

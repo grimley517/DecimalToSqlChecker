@@ -9,19 +9,7 @@ public interface IDecimalChecker
     int Scale { get; init; }
     int Precision { get; init; }
 
-    /// <summary>
-    /// Gets the precision of a decimal number
-    /// </summary>
-    /// <param name="input">decimal number to be checked</param>
-    /// <returns></returns>
-    int GetPrecision(decimal input);
 
-    /// <summary>
-    /// Gets the scale of a decimal number
-    /// </summary>
-    /// <param name="input">decimal number to be checked</param>
-    /// <returns></returns>
-    byte GetScale(decimal input);
 
         /// <summary>
         /// Gets the precision of a decimal number
@@ -44,6 +32,6 @@ public interface IDecimalChecker
         /// </summary>
         /// <param name="input">decimal number to be checked</param>
         /// <returns></returns>
-        bool IsCompatible(decimal input);
-    }
+        bool IsCompatible(decimal input);    
 }
+
