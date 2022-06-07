@@ -21,12 +21,12 @@
     <Description>A utility for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
 
 Other uses may become apparent.</Description>
-    <PackageVersion>0.0.1</PackageVersion>
+    <PackageVersion>0.1.1</PackageVersion>
     <ReleaseNotes>
-        ### Version 0.0.1
+        ### Version 0.1.1
 
-        Initial release.  Aiming to get a package out in an evening.
-        This library makes it easier to check the compatibility of a decimal value with the Corresponding sqlserver field. 
+        Looking at a validation based approach
+        see test files for examples of usage
     </ReleaseNotes>
   </PropertyGroup>
 

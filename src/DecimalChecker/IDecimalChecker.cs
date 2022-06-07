@@ -14,6 +14,7 @@
         /// </summary>
         /// <param name="input">decimal number to be checked</param>
         /// <returns></returns>
+        [Obsolete("Use decimal.getPrecision extension method", true)]
         int GetPrecision(decimal input);
 
         /// <summary>
@@ -21,6 +22,7 @@
         /// </summary>
         /// <param name="input">decimal number to be checked</param>
         /// <returns></returns>
+        [Obsolete("Use decimal.getScale extension method", true)]
         byte GetScale(decimal input);
 
         /// <summary>
