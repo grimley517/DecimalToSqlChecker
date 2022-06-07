@@ -1,24 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackOnBuild>true</PackOnBuild>
+		<PackageId>Grimpop.DecimalChecker</PackageId>
+		<Authors>Brian Jones</Authors>
+		<Copyright>2022 © Brian Jones, GrimPop</Copyright>
+		<NeutralLanguage>en-AU</NeutralLanguage>
+		<PackageProjectUrl>https://github.com/grimley517/DecimalToSqlChecker</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/grimley517/DecimalToSqlChecker</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>decimal sqlServer scale precision</PackageTags>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<Owners>GrimPop</Owners>
+		<Title>GrimPop Decimal Checker</Title>
+		<Description>A utility for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <PackOnBuild>true</PackOnBuild>
-    <PackageId>Grimpop.DecimalChecker</PackageId>
-    
-    <Authors>Brian Jones</Authors>
-    <Copyright>2022 © Brian Jones, GrimPop</Copyright>
-    <NeutralLanguage>en-AU</NeutralLanguage>
-    <PackageProjectUrl>https://github.com/grimley517/DecimalToSqlChecker</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/grimley517/DecimalToSqlChecker</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>decimal sqlServer scale precision</PackageTags>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Owners>Grimpop</Owners>
-    <Title>Grimpop Decimal Checker</Title>
-    <Description>A utility for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
+Other uses may become apparent.</Description>
+		<PackageVersion>0.1.0</PackageVersion>
+		<ReleaseNotes>
+        ### Version 0.1.0
 
 Other uses may become apparent.</Description>
     <PackageVersion>0.1.1</PackageVersion>

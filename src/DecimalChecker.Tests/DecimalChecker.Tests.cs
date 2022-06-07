@@ -1,5 +1,5 @@
+using GrimPop.DecimalChecker;
 using Xunit;
-using DecimalChecker;
 
 namespace DecimalChecker.Tests;
 public class DecimalCheckerTests
@@ -21,7 +21,6 @@ public class DecimalCheckerTests
         Assert.Equal(2, checker.Scale);
         Assert.Equal(1, checker.Precision);
     }
-
 
 
     [Theory]
