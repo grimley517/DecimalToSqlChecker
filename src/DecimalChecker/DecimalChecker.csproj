@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>Grimpop.DecimalChecker</PackageId>
-    <PackageVersion>0.0.1</PackageVersion>
+    
     <Authors>Brian Jones</Authors>
     <Copyright>2022 © Brian Jones, GrimPop</Copyright>
     <NeutralLanguage>en-AU</NeutralLanguage>
@@ -21,6 +21,13 @@
     <Description>A utility for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
 
 Other uses may become apparent.</Description>
+    <PackageVersion>0.0.1</PackageVersion>
+    <ReleaseNotes>
+        ### Version 0.0.1
+
+        Initial release.  Aiming to get a package out in an evening.
+        This library makes it easier to check the compatibility of a decimal value with the Corresponding sqlserver field. 
+    </ReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
