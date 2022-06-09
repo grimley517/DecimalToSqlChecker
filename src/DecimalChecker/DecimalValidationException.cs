@@ -1,6 +1,12 @@
 ﻿namespace GrimPop.DecimalChecker;
 
+/// <summary>
+/// A decimal did not pass validation, 
+/// </summary>
 public class DecimalValidationException : Exception{
+    /// <summary>
+    /// The input that failed validation
+    /// </summary>
     public decimal FailedInput { get; init; }
 
     public DecimalValidationException()
