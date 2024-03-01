@@ -35,7 +35,7 @@ Other uses may become apparent.</Description>
   </PropertyGroup>
   <ItemGroup>
     <Content
-	    Include="../../README.Md"
+	    Include="../../README.md"
 		CopyToOutputDirectory="Always"
 	/>
   </ItemGroup>
