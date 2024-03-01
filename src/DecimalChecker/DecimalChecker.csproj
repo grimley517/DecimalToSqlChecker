@@ -7,7 +7,7 @@
 		<PackOnBuild>true</PackOnBuild>
 		<PackageId>Grimpop.DecimalChecker</PackageId>
 		<Authors>Brian Jones</Authors>
-		<Copyright>2022 © Brian Jones, GrimPop</Copyright>
+		<Copyright>2022-2024 © Brian Jones, GrimPop</Copyright>
 		<NeutralLanguage>en-AU</NeutralLanguage>
 		<PackageProjectUrl>https://github.com/grimley517/DecimalToSqlChecker</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/grimley517/DecimalToSqlChecker</RepositoryUrl>
@@ -34,9 +34,10 @@ Other uses may become apparent.</Description>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Content
-	    Include="../../README.md"
-		CopyToOutputDirectory="Always"
-	/>
+    <Content Include="../../README.md" CopyToOutputDirectory="Always" >
+			<Pack>true</Pack>
+			<PackagePath>README.md</PackagePath>
+		</Content>
   </ItemGroup>
+
 </Project>
