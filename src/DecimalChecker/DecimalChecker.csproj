@@ -15,6 +15,7 @@
 		<PackageTags>decimal sqlServer scale precision</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageReadmefile>../../README.md</PackageReadmefile>
 		<Owners>GrimPop</Owners>
 		<Title>GrimPop Decimal Checker</Title>
 		<Description>A utility library for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
