@@ -5,6 +5,8 @@ on:
     types: [published]
 env:
   PROJECT: src/DecimalChecker.sln
+  NuGetDirectory: nuget
+  
 jobs:
   create_nuget:
     runs-on: ubuntu-latest
