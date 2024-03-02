@@ -7,7 +7,7 @@
 		<PackOnBuild>true</PackOnBuild>
 		<PackageId>Grimpop.DecimalChecker</PackageId>
 		<Authors>Brian Jones</Authors>
-		<Copyright>2022 © Brian Jones, GrimPop</Copyright>
+		<Copyright>2022-2024 © Brian Jones, GrimPop</Copyright>
 		<NeutralLanguage>en-AU</NeutralLanguage>
 		<PackageProjectUrl>https://github.com/grimley517/DecimalToSqlChecker</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/grimley517/DecimalToSqlChecker</RepositoryUrl>
@@ -15,22 +15,29 @@
 		<PackageTags>decimal sqlServer scale precision</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+		<PackageReadmefile>README.md</PackageReadmefile>
 		<Owners>GrimPop</Owners>
 		<Title>GrimPop Decimal Checker</Title>
 		<Description>A utility library for checking whether a decimal number will fit into a SQL server decimal field with a given scale and precision.
 
 Other uses may become apparent.</Description>
 
-    <PackageVersion>0.1.1</PackageVersion>
+    <PackageVersion>0.1.2</PackageVersion>
     <ReleaseNotes>
-        ### Version 0.1.1
+        ### Version 0.1.2
 
-        Looking at a validation based approach
-        see test files for examples of usage
+        Upgrades and security fixes
     </ReleaseNotes>
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="../../README.md" CopyToOutputDirectory="Always" >
+			<Pack>true</Pack>
+			<PackagePath>README.md</PackagePath>
+		</Content>
+  </ItemGroup>
+
 </Project>
