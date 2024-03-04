@@ -3,6 +3,7 @@
 /// <summary>
 /// A decimal did not pass validation, 
 /// </summary>
+[Serializable]
 public class DecimalValidationException : Exception{
     /// <summary>
     /// The input that failed validation
