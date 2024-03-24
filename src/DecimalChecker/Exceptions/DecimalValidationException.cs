@@ -1,4 +1,6 @@
-﻿namespace GrimPop.DecimalChecker;
+﻿using System.Runtime.Serialization;
+
+namespace GrimPop.DecimalChecker;
 
 /// <summary>
 /// A decimal did not pass validation, 
@@ -22,5 +24,9 @@ public class DecimalValidationException : Exception{
     public DecimalValidationException(decimal input):base()
     {
         FailedInput = input;
+    }
+
+    protected DecimalValidationException(SerializationInfo info, StreamingContext context) : base(info, context)
+    {
     }
 }
