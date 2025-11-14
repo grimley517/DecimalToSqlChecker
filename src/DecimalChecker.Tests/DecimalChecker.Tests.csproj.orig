@@ -30,6 +30,19 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+<<<<<<<
   </ItemGroup>
 
 </Project>
+=======
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <IsTestProject>true</IsTestProject>
+<<<<<<<
+<<<<<<<
+>>>>>>>
+=======
+>>>>>>>
+=======
+>>>>>>>
