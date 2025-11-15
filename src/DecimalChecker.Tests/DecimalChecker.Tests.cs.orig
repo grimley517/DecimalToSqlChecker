@@ -1,6 +1,7 @@
 using Xunit;
 using DChecker = GrimPop.DecimalChecker.DecimalChecker;
 using DecimalChecker;
+using DecimalChecker;
 
 namespace GrimPop.DecimalChecker.Tests;
 public class DecimalCheckerTests

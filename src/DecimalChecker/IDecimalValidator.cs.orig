@@ -1,5 +1,4 @@
 ﻿
-import json
 namespace GrimPop.DecimalChecker
 {
     /// <summary>
