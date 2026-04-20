@@ -52,12 +52,22 @@ C4Context
 
     System_Ext(sqlDatabase, "SQL Database", "A relational database (e.g. SQL Server) that stores decimal values with defined precision and scale.")
 
-    Rel(developer, decimalToSqlChecker, "Uses to validate decimals")
-    Rel(decimalToSqlChecker, sqlDatabase, "Validates values against field constraints of")
+    Rel(developer, decimalToSqlChecker, "Uses to validate decimals before storing")
+    Rel(developer, sqlDatabase, "Stores validated values in")
 ```
 
 ### C4 Component View
 
+```mermaid
+C4Component
+    title Component Diagram for DecimalToSqlChecker
+
+    Person(developer, "Developer", "A .NET developer consuming the library.")
+
+    Container_Boundary(library, "DecimalToSqlChecker Library") {
+        Component(decimalValidator, "DecimalValidator", ".NET Class", "Validates that a decimal value fits within a target SQL field precision and scale. Supports configurable rounding strategies.")
+        Component(decimalChecker, "DecimalChecker", ".NET Class", "Checks the precision and scale of a decimal value against SQL field constraints.")
+        Component(decimalExtensions, "DecimalExtensions", ".NET Extension Methods", "Provides extension methods for working with decimal precision and scale.")
     }
 
     System_Ext(sqlDatabase, "SQL Database", "A relational database that stores decimal values with defined precision and scale.")
@@ -65,5 +75,5 @@ C4Context
     Rel(developer, decimalValidator, "Creates and calls Validate()")
     Rel(decimalValidator, decimalChecker, "Uses")
     Rel(decimalValidator, decimalExtensions, "Uses")
-    Rel(decimalValidator, sqlDatabase, "Validates values against constraints of")
+    Rel(developer, sqlDatabase, "Stores validated values in")
 ```
