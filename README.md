@@ -56,18 +56,8 @@ C4Context
     Rel(decimalToSqlChecker, sqlDatabase, "Validates values against field constraints of")
 ```
 
-### C4 Container View
+### C4 Component View
 
-```mermaid
-C4Container
-    title Container Diagram for DecimalToSqlChecker
-
-    Person(developer, "Developer", "A .NET developer consuming the library.")
-
-    Container_Boundary(library, "DecimalToSqlChecker Library") {
-        Container(decimalValidator, "DecimalValidator", ".NET Class", "Validates that a decimal value fits within a target SQL field precision and scale. Supports configurable rounding strategies.")
-        Container(decimalChecker, "DecimalChecker", ".NET Class", "Checks the precision and scale of a decimal value against SQL field constraints.")
-        Container(decimalExtensions, "DecimalExtensions", ".NET Extension Methods", "Provides extension methods for working with decimal precision and scale.")
     }
 
     System_Ext(sqlDatabase, "SQL Database", "A relational database that stores decimal values with defined precision and scale.")
