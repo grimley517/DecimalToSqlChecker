@@ -25,9 +25,9 @@ jobs:
     - name: Build
       run: dotnet build $solution --no-restore
     - name: Test
-      run: dotnet test $solution --no-build --verbosity normal
+      run: dotnet test $solution --verbosity normal
     - name: Pack
-      run: dotnet pack $solution --no-build --include-source --output pkgs
+      run: dotnet pack $solution --output pkgs
     - name: Upload Package as a Build Artifact
       uses: actions/upload-artifact@v7
       with:
