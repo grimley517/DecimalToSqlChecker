@@ -15,21 +15,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v6
     - name: Setup .NET
-      uses: actions/setup-dotnet@v2
-      with:
-        dotnet-version: 6.0.x
+      uses: actions/setup-dotnet@v5
     - name: Restore dependencies
       run: dotnet restore $solution
     - name: Build
       run: dotnet build $solution --no-restore
     - name: Test
-      run: dotnet test $solution --no-build --verbosity normal
+      run: dotnet test $solution --verbosity normal
     - name: Pack
-      run: dotnet pack $solution --no-build --include-source --output pkgs
+      run: dotnet pack $solution --output pkgs
     - name: Upload Package as a Build Artifact
-      uses: actions/upload-artifact@v3.1.0
+      uses: actions/upload-artifact@v7
       with:
         name: package
         path: pkgs
