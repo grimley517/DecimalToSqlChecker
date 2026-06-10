@@ -37,3 +37,39 @@ Simple useage
 Note that the output will fit into the expected field. It may be rounded, the rounding strategy can be set in the validator.
 
 See the tests for further examples.
+
+## Architecture
+
+### C4 Context View
+
+```mermaid
+C4Context
+    title System Context Diagram for DecimalToSqlChecker
+
+    Person(developer, "Developer", "A .NET developer who needs to validate decimal values before storing them in a SQL database.")
+
+    System(decimalToSqlChecker, "DecimalToSqlChecker", "A .NET library that checks whether a decimal value fits within a SQL field's defined precision and scale.")
+
+    System_Ext(sqlDatabase, "SQL Database", "A relational database (e.g. SQL Server) that stores decimal values with defined precision and scale.")
+
+    Rel(developer, decimalToSqlChecker, "Uses to validate decimals before storing")
+```
+
+### C4 Component View
+
+```mermaid
+C4Component
+    title Component Diagram for DecimalToSqlChecker
+
+    Person(developer, "Developer", "A .NET developer consuming the library.")
+
+    Container_Boundary(library, "DecimalToSqlChecker Library") {
+        Component(decimalValidator, "DecimalValidator", ".NET Class", "Validates that a decimal value fits within a target SQL field precision and scale. Supports configurable rounding strategies.")
+        Component(decimalChecker, "DecimalChecker", ".NET Class", "Checks the precision and scale of a decimal value against SQL field constraints.")
+        Component(decimalExtensions, "DecimalExtensions", ".NET Extension Methods", "Provides extension methods for working with decimal precision and scale.")
+    }
+
+    Rel(developer, decimalValidator, "Creates and calls Validate()")
+    Rel(decimalValidator, decimalChecker, "Uses")
+    Rel(decimalValidator, decimalExtensions, "Uses")
+```
