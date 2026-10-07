@@ -1,0 +1,11 @@
+# Managed by grimley517/pr-standards — do not edit; changes are overwritten by rollout.
+name: pr-standards
+on:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  pr-standards:
+    uses: grimley517/pr-standards/.github/workflows/gate.yml@main
+    with:
+      type: code
