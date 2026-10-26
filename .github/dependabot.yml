@@ -1,0 +1,41 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/frontend"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    assignees:
+      - "grimley517"
+  
+  - package-ecosystem: "dotnet-sdk"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+      day: "tuesday"
+    assignees:
+      - "grimley517"
+  
+  - package-ecosystem: "nuget"
+    directory: "/backend"
+    schedule:
+      interval: "weekly"
+      day: "wednesday"
+    assignees:
+      - "grimley517"
+  
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "thursday"
+    assignees:
+      - "grimley517"
+      
+  - package-ecosystem: "uv"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+    assignees:
+      - "grimley517"
