@@ -1,41 +1,29 @@
 version: 2
 updates:
-  - package-ecosystem: "npm"
-    directory: "/frontend"
+  - package-ecosystem: dotnet-sdk
+    directory: /
     schedule:
-      interval: "weekly"
-      day: "monday"
+      interval: weekly
+      day: monday
     assignees:
-      - "grimley517"
-  
-  - package-ecosystem: "dotnet-sdk"
-    directory: "/backend"
+      - grimley517
+    cooldown:
+      default-days: 7
+  - package-ecosystem: nuget
+    directory: /src
     schedule:
-      interval: "weekly"
-      day: "tuesday"
+      interval: weekly
+      day: tuesday
     assignees:
-      - "grimley517"
-  
-  - package-ecosystem: "nuget"
-    directory: "/backend"
+      - grimley517
+    cooldown:
+      default-days: 7
+  - package-ecosystem: github-actions
+    directory: /
     schedule:
-      interval: "weekly"
-      day: "wednesday"
+      interval: weekly
+      day: wednesday
     assignees:
-      - "grimley517"
-  
-  - package-ecosystem: "github-actions"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "thursday"
-    assignees:
-      - "grimley517"
-      
-  - package-ecosystem: "uv"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-      day: "sunday"
-    assignees:
-      - "grimley517"
+      - grimley517
+    cooldown:
+      default-days: 7
