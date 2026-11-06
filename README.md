@@ -14,27 +14,18 @@ This Library checks the scale and precision of a decimal value.
 Simple useage
 
 ```csharp
-    [Theory]
-    [InlineData(0.2,  0.2)]
-    [InlineData(9.99,  9.99)]
-    [InlineData(9.999, 10.00)]
-    [InlineData(2.222, 2.22)]
-    [InlineData(9.9999,  10.00)]
-    [InlineData(9.99999999,  10.00)]
-    [InlineData(99.99,  99.99)]
-    [InlineData(999.9,  999.9)]
-    [InlineData(9999,  9999)]
-    [InlineData(9998.00,  9998)]
-    public void CheckValidator_Precision4_Scale2_NumericOutput(decimal input, decimal output)
-    {
-        var validator = new DecimalValidator(targetPrecision: 4, targetScale: 2);
-        var output = validator.Validate(input);
+using GrimPop.DecimalChecker;
 
-        Assert.Equal(expectedOutput, actualOutput);
-    }
+// A SQL decimal(4, 2) field: up to 4 digits in total, 2 after the decimal point.
+var validator = new DecimalValidator(targetPrecision: 4, targetScale: 2);
+
+validator.Validate(2.222m);    // 2.22  (rounded to fit the scale)
+validator.Validate(9.999m);    // 10.00 (rounded, still fits the precision)
+validator.Validate(99.99m);    // 99.99 (already fits)
+validator.Validate(12345m);    // null  (cannot fit, even after rounding)
 ```
 
-Note that the output will fit into the expected field. It may be rounded, the rounding strategy can be set in the validator.
+`Validate` returns a value that fits the target field, rounding if needed. If the value cannot fit, it returns `null`, or throws a `DecimalValidationException` when `throwErrorOnValidationFail: true` is passed to the constructor. The rounding strategy defaults to `MidpointRounding.AwayFromZero` and can be set in the validator.
 
 See the tests for further examples.
 
